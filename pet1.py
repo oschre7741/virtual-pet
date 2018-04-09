@@ -24,7 +24,9 @@ class Pet:
         if self.is_alive:
             print(self.name + " goes 'Yippee!'")
             self.fun += 1
-            print(self.name + "'s fun is now " + self.fun)
+            if self.fun > 10:
+                print(self.name + "'s fun is maxed out!")
+            print(self.name + "'s fun is now " + str(self.fun))
         else:
             print("Dis boi ded.")
 
@@ -32,8 +34,12 @@ class Pet:
         if self.is_alive:
             print(self.name + " plays with " + other.name)
             self.fun += 1
+            if self.fun > 10:
+                print(self.name + "'s fun is maxed out!")
             print(self.name + "'s fun is now " + str(self.fun))
             other.fun += 1
+            if other.fun > 10:
+                print(other.name + "'s fun is maxed out!")
             print(other.name + "'s fun is now " + str(other.fun))
         else:
             print("Dis boi ded.")
@@ -73,8 +79,8 @@ class Pet:
         print(self.name + " kills " + other.name + "!")
         other.is_alive = False
 
-    def resurect(self, other):
-        print(self.name + " resurects " + other.name + "!")
+    def resurrect(self, other):
+        print(self.name + " resurrects " + other.name + "!")
         other.is_alive = True
   
     def __repr__(self):
@@ -84,7 +90,7 @@ class Pet:
                ", d=" + str(self.direction) + "]"
     
     
-pet1 = Pet("Eric Foreman")
-pet2 = Pet("Edgy")
-pet3 = Pet("Mikey")
+pet1 = Pet("Joseph")
+pet2 = Pet("Taylor")
+pet3 = Pet("Hailey")
 
